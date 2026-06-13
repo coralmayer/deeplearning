@@ -49,7 +49,7 @@ class NearestNeighborClassifier:
             Both should have a shape [1, D]
         """
         mean = x.mean(dim=0, keepdim=True)
-        std = x.std(dim=0, keepdim=True, unbiased=False)
+        std = x.std = x.std(dim=0, keepdim=True)
         return mean, std
 
     def input_normalization(self, x: torch.Tensor) -> torch.Tensor:
