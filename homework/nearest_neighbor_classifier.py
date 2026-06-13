@@ -33,7 +33,7 @@ class NearestNeighborClassifier:
         Returns:
             tuple of x and y both torch.Tensor's.
         """
-        return torch.as_tensor(x, dtype=float32), torch.as_tensor(y, dtype=float32)
+        return torch.as_tensor(x, dtype=torch.float32), torch.as_tensor(y, dtype=torch.float32)
 
     @classmethod
     def compute_data_statistics(cls, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
