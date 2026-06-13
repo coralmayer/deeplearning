@@ -70,7 +70,7 @@ class WeatherForecast:
             tensor of a single value, the predicted temperature
         """
         avg = self.data.mean(dim=1)
-        return avg[-k:].mean().unsqueeze(0)
+        return avg[-k:].mean()
 
     def what_day_is_this_from(self, t: torch.FloatTensor) -> torch.LongTensor:
         """

@@ -112,4 +112,4 @@ class NearestNeighborClassifier:
             average value of labels from the k neighbors. Tensor of shape [1]
         """
         _, labels = self.get_k_nearest_neighbor(x, k)
-        return labels.mean().unsqueeze(0)
+        return labels.mean()
